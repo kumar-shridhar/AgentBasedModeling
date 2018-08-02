@@ -21,7 +21,7 @@ to setup
 end
 
 to go
-  if count turtles > num-of-agents [ stop ], stop when max number of agents is reached
+  if count turtles > num-of-agents [ stop ]; stop when max number of agents is reached
   ;; logic of the preferential attachment mechanism
   let partner one-of [ both-ends ] of one-of links
   ;; create new node, link to partner
@@ -30,7 +30,7 @@ to go
     ;; move close to my partner, but not too close -- to enable nicer looking networks
     move-to partner
     fd 1
-    if [color] of turtles != [color] of partner ; condition to not connect same colored agents nodes
+    if last [color] of turtles != [color] of partner ; condition to not connect same colored agents nodes
       [create-link-with partner]
   ]
   ;; lay out the nodes with a spring layout
@@ -177,24 +177,6 @@ NIL
 NIL
 NIL
 0
-
-PLOT
-10
-340
-235
-485
-Degree Distribution
-Degree
-# Nodes
-0.0
-1.0
-0.0
-1.0
-true
-false
-"" "set-plot-x-range 1 (max [ count my-links ] of turtles) + 1"
-PENS
-"default" 1.0 1 -16777216 true "" "histogram [ count my-links ] of turtles"
 
 SWITCH
 10
