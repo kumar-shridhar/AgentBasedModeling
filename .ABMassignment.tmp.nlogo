@@ -40,7 +40,7 @@ end
 
 to layout
   ask turtles [
-    ifelse display-degree?; this is an extra option taken from
+    ifelse display-degree?; this is an
       [ set size sqrt count my-links ]
       [ set size 1 ]
   ]
