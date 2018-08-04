@@ -1,5 +1,19 @@
-# AgentBasedModeling
- Growing network of colored agents connected to different colors
-
+# Agent Based Modeling task for Growning Network
+ 
 ![Growning Network GIF](./ABM.gif)
 
+### Task
+
+Model a growing network of colored agents that connects to agents of different colors. It is modeled using NetLogo.
+
+### Requirements:
+
+* NetLogo (Install from here : https://ccl.northwestern.edu/netlogo/download.shtml)
+
+### Hyperparameters:
+
+* Number of Agents
+* Agents color
+* Node density
+* Maximum-Minimum Node density
+* Speed of motion
