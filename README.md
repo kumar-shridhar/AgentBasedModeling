@@ -1,6 +1,6 @@
-# Agent Based Modeling task for Growning Network
+# Agent Based Modeling task for Growing Network
  
-![Growning Network GIF](./ABM.gif)
+![Growing Network GIF](./ABM.gif)
 
 ### Task
 
