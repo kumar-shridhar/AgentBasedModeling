@@ -1,8 +1,6 @@
 globals
 [
   colors-set; list of colors based on number specified by the user
-  current-turtle-value; value of current turtle
-  current-turtle-color; color of current turtle
 ]
 
 to setup
@@ -18,7 +16,7 @@ to setup
     fd 5
   ]
   ask turtle 0 [ create-link-with turtle 1 ]  ;; create a link between turtle 0 and turtle 1
-  set colors-set n-of Agent-color [5 15 25 35 45 55 65 75 85 95 105]; choose agent colors from 0-11
+  set colors-set n-of Agent-color [5 15 25 35 45 55 65 75 85 95 105]; choose agent colors from 5-11
   reset-ticks
 end
 
@@ -30,12 +28,12 @@ to go
   create-turtles 1 [
     set color one-of colors-set; chosse one of colors from the colors-set chosen
     ;; move close to my partner, but not too close -- to enable nicer looking networks
+
     move-to partner
+    show partner
+    show current-node
     fd 1
-    set current-turtle-value count turtles
-    show current-turtle-value
-    show [color] of turtles
-    if l[color] of turtles != [color] of partner ; condition to not connect same colored agents nodes
+    if last [color] of turtles != [color] of partner ; condition to not connect same colored agents nodes
       [create-link-with partner]
   ]
   ;; lay out the nodes with a spring layout
@@ -138,7 +136,7 @@ num-of-agents
 num-of-agents
 2
 500
-289.0
+0.0
 1
 1
 NIL
@@ -201,9 +199,9 @@ SLIDER
 143
 Agent-color
 Agent-color
-0
+5
 11
-4.0
+0.0
 1
 1
 NIL
